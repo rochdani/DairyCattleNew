@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg11"
+    tools:context=".AddDisease">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:scrollbars="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layoutSeat"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Date "
+        android:inputType="date"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="96dp" />
+
+    <EditText
+        android:id="@+id/editTextClinicalSign"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Clinical Signs"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:layout_editor_absoluteX="96dp" />
+
+    <EditText
+        android:id="@+id/editTextTypeOfClinicalSign"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Type Of Clinical Signs"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextClinicalSign"
+        tools:layout_editor_absoluteX="97dp" />
+
+    <EditText
+        android:id="@+id/editTextDiagnosis"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Diagnosis"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTypeOfClinicalSign"
+        tools:layout_editor_absoluteX="96dp" />
+
+    <EditText
+        android:id="@+id/editTextTreatment"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Treatment"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDiagnosis"
+        tools:layout_editor_absoluteX="98dp" />
+
+    <EditText
+        android:id="@+id/editTextRemarks"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Remarks"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTreatment"
+        tools:layout_editor_absoluteX="98dp" />
+
+    <EditText
+        android:id="@+id/editTextNameOfVeterinarian"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Name Of Veterinarian"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRemarks"
+        tools:layout_editor_absoluteX="97dp" />
+
+    <Button
+        android:id="@+id/buttonAddBreeding"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/add"
+        android:gravity="center"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Veterinarians Records</string>
+    <string name="add">add</string>
+
+    <array name="genres">
+        <item>Rock</item>
+        <item>Sufi</item>
+        <item>pop</item>
+        <item>Folk</item>
+
+
+    </array>
+    <string name="action_settings">Settings</string>
+</resources>
