@@ -27,12 +27,12 @@ public class CattleList extends ArrayAdapter<Cattle> {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.cattle_list, null, true);
 
-        TextView textViewCattleId = listViewItem.findViewById(R.id.textViewCattleId);
-        TextView textViewCattleBreed = listViewItem.findViewById(R.id.textViewCattleBreed);
+        TextView textViewCattleTagID = listViewItem.findViewById(R.id.textViewCattleBreed);
+        TextView textViewCattleSex = listViewItem.findViewById(R.id.textViewCattleId);
 
         Cattle cattle = cattleList.get(position);
-        textViewCattleId.setText(cattle.getCattleID());
-        textViewCattleBreed.setText(cattle.getCattleBreed());
+        textViewCattleTagID.setText(cattle.getCattleTAGID());
+        textViewCattleSex.setText(cattle.getCattleSex());
 
 
         return listViewItem;

@@ -29,19 +29,28 @@ public class BreedingList extends ArrayAdapter<Breeding> {
 
         TextView textViewBreedingID= listViewItem.findViewById(R.id.textViewBreedingID);
         TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingDateofHeat = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreeding = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
-        TextView textViewBreedingSemenID = listViewItem.findViewById(R.id.textViewBreedingSemenID);
+        TextView textViewBreedingDateofHeat = listViewItem.findViewById(R.id.textViewBreedingDateofHeat);
+        TextView textViewBreedingDateofFAI = listViewItem.findViewById(R.id.textViewBreedingDateofFAI);
+        TextView textViewBreedingDateofSAI = listViewItem.findViewById(R.id.textViewBreedingDateofSAI);
+        TextView textViewBreedingVetCode= listViewItem.findViewById(R.id.textViewBreedingVetCode);
+        TextView textViewBreedingDateofPD = listViewItem.findViewById(R.id.textViewBreedingDateofPd);
+        TextView textViewBreedingDateofLastCal = listViewItem.findViewById(R.id.textViewBreedingDateofLC);
+        TextView textViewBreedingNameofTech= listViewItem.findViewById(R.id.textViewBreedingDateofTech);
+        TextView textViewBreedingNoofCal = listViewItem.findViewById(R.id.textViewBreedingNoofCal);
+        TextView textViewBreedingAIRecpt = listViewItem.findViewById(R.id.textViewBreedingAIReceipt);
 
         Breeding breeding = breedingList.get(position);
         textViewBreedingID.setText(breeding.getBreedingID());
         textViewBreedingSemenID.setText(breeding.getBreedingSemenID());
+        textViewBreedingDateofHeat.setText(breeding.getBreedingDateOfHeatSignObserved());
+        textViewBreedingDateofFAI.setText(breeding.getBreedingDateOfFirstAI());
+        textViewBreedingDateofSAI.setText(breeding.getBreedingDateOfSecondAI());
+        textViewBreedingVetCode.setText(breeding.getBreedingVeterinarianCode());
+        textViewBreedingDateofPD.setText(breeding.getBreedingDateOfPD());
+        textViewBreedingDateofLastCal.setText(breeding.getBreedingDateOfLastCalving());
+        textViewBreedingNameofTech.setText(breeding.getBreedingNameOfTechnnician());
+        textViewBreedingNoofCal.setText(breeding.getBreedingNoOfCalving());
+        textViewBreedingAIRecpt.setText(breeding.getBreedingAIReceiptNo());
 
 
         return listViewItem;

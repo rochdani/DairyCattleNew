@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -55,6 +57,20 @@ public class ViewVaccination extends AppCompatActivity {
                 bundles.putString("CattleID",m);
                 intToAddVaccine.putExtras(bundles);
                 startActivity(intToAddVaccine);
+            }
+        });
+
+        ListViewVaccine.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long l) {
+                Vaccine vaccine = vaccineList.get(i);
+
+
+                //updateFarmDetail(farm.getFarmId(),farm.getFarmName(),farm.getFarmRegNo(),farm.getFarmOwnName(),farm.getFarmVetDiv(),farm.getFarmGSDiv(),farm.getFarmAddress(),farm.getFarmContactNo(),farm.getFarmCattleCount(),farm.getFarmDairyCattleCount());
+                deleteVaccine(vaccine.getVaccineID());
+
+                return true;
+
             }
         });
 
@@ -108,6 +124,23 @@ public class ViewVaccination extends AppCompatActivity {
         return stuff;
 
 
+    }
+
+    private boolean deleteVaccine(String ID){
+
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("vaccine").child(ID);
+        databaseReference.removeValue();
+        Toast.makeText(this, "Vaccines Deleted Successfully", Toast.LENGTH_LONG).show();
+
+        Intent intToHome = new Intent(ViewVaccination.this, ViewVaccination.class);
+        startActivity(intToHome);
+
+
+
+
+
+        return true;
     }
 
 }

@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -55,6 +57,19 @@ public class ViewDisease extends AppCompatActivity {
                 bundles.putString("CattleID",m);
                 intToAddDisease.putExtras(bundles);
                 startActivity(intToAddDisease);
+            }
+        });
+        ListViewDisease.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long l) {
+                Disease disease = diseaseList.get(i);
+
+
+                //updateFarmDetail(farm.getFarmId(),farm.getFarmName(),farm.getFarmRegNo(),farm.getFarmOwnName(),farm.getFarmVetDiv(),farm.getFarmGSDiv(),farm.getFarmAddress(),farm.getFarmContactNo(),farm.getFarmCattleCount(),farm.getFarmDairyCattleCount());
+                deleteDisease(disease.getDiseaseID());
+
+                return true;
+
             }
         });
 
@@ -106,6 +121,22 @@ public class ViewDisease extends AppCompatActivity {
         return stuff;
 
 
+    }
+    private boolean deleteDisease(String ID){
+
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("disease").child(ID);
+        databaseReference.removeValue();
+        Toast.makeText(this, "Diseases Deleted Successfully", Toast.LENGTH_LONG).show();
+
+        Intent intToHome = new Intent(ViewDisease.this, ViewDisease.class);
+        startActivity(intToHome);
+
+
+
+
+
+        return true;
     }
 
 }

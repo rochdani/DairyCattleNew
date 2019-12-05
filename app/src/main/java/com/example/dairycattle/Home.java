@@ -86,10 +86,12 @@ public class Home extends AppCompatActivity {
                 bundle.putString("stuff",farm.getFarmId());
                 bundle.putString("fameName",farm.getFarmName());
                 bundle.putString("farmRegNo",farm.getFarmRegNo());
+
                 bundle.putString("farmOwnName",farm.getFarmOwnName());
+                bundle.putString("farmVetDiv",farm.getFarmVetDiv());
                 bundle.putString("farmGSDiv",farm.getFarmGSDiv());
                 bundle.putString("farmAddress",farm.getFarmAddress());
-                bundle.putString("farmContactNo",farm.getFarmId());
+                bundle.putString("farmContactNo",farm.getFarmContactNo());
                 bundle.putString("farmCattleCount",farm.getFarmCattleCount());
                 bundle.putString("farmDairyCattleCount",farm.getFarmDairyCattleCount());
 

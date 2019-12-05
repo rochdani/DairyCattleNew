@@ -166,6 +166,8 @@ public class addCattle extends AppCompatActivity {
             //displaying a success toast
             Toast.makeText(this, "New Farm Added", Toast.LENGTH_LONG).show();
             Intent intToCattle = new Intent(addCattle.this, ViewCattles.class);
+            startActivity(intToCattle);
+            finish();
 
 
 

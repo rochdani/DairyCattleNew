@@ -31,6 +31,8 @@ public class AddBreeding extends AppCompatActivity {
 
     private TextView editTextDateOFHeatSignObserved;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private DatePickerDialog.OnDateSetListener mDateSetListener1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,10 +77,10 @@ public class AddBreeding extends AppCompatActivity {
 
                 String date = year + "-" + months + "-" + days;
                 editTextDateOFHeatSignObserved.setText(date);
-                editTextDateOfFirstAI.setText(date);
-                editTextDateOfSecondAI.setText(date);
-                editTextDateOfPD.setText(date);
-                editTextDateOfLastCalving.setText(date);
+//                editTextDateOfFirstAI.setText(date);
+//                editTextDateOfSecondAI.setText(date);
+//                editTextDateOfPD.setText(date);
+//                editTextDateOfLastCalving.setText(date);
             }
         };
 
@@ -102,6 +104,24 @@ public class AddBreeding extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        mDateSetListener1 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+
+                month = month + 1;
+                String months = String.format("%02d", month);
+                String days = String.format("%02d", day);
+                Log.d(TAG, "onDateSet: yyyy/mm/dd: " + year + "-" + months + "-" + day);
+
+                String date = year + "-" + months + "-" + days;
+              //  editTextDateOFHeatSignObserved.setText(date);
+               editTextDateOfFirstAI.setText(date);
+//                editTextDateOfSecondAI.setText(date);
+//                editTextDateOfPD.setText(date);
+//                editTextDateOfLastCalving.setText(date);
+            }
+        };
 
 
         editTextDateOfSecondAI = (EditText) findViewById(R.id.editTextDateOfSecondAI);
@@ -223,7 +243,9 @@ public class AddBreeding extends AppCompatActivity {
 
             //displaying a success toast
             Toast.makeText(this, "New Breeding Added", Toast.LENGTH_LONG).show();
-            Intent intToCattle = new Intent(AddBreeding.this, ViewVaccination.class);
+            Intent intToCattle = new Intent(AddBreeding.this, ViewBreeding.class);
+            startActivity(intToCattle);
+            finish();
 
 
 

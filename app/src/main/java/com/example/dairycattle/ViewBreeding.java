@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,6 +56,20 @@ public class ViewBreeding extends AppCompatActivity {
                 bundles.putString("CattleID",m);
                 intToAddBreeding.putExtras(bundles);
                 startActivity(intToAddBreeding);
+            }
+        });
+
+        ListViewBreeding.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int i, long l) {
+                Breeding breeding = breedingList.get(i);
+
+
+                //updateFarmDetail(farm.getFarmId(),farm.getFarmName(),farm.getFarmRegNo(),farm.getFarmOwnName(),farm.getFarmVetDiv(),farm.getFarmGSDiv(),farm.getFarmAddress(),farm.getFarmContactNo(),farm.getFarmCattleCount(),farm.getFarmDairyCattleCount());
+                deleteBreed(breeding.getBreedingID());
+
+                return true;
+
             }
         });
 
@@ -106,6 +122,22 @@ public class ViewBreeding extends AppCompatActivity {
         return stuff;
 
 
+    }
+    private boolean deleteBreed(String ID){
+
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("breeding").child(ID);
+        databaseReference.removeValue();
+        Toast.makeText(this, "Breed Deleted Successfully", Toast.LENGTH_LONG).show();
+
+        Intent intToHome = new Intent(ViewBreeding.this, ViewBreeding.class);
+        startActivity(intToHome);
+
+
+
+
+
+        return true;
     }
 
 }
