@@ -140,7 +140,7 @@ public class ViewCattles extends AppCompatActivity {
                 Cattle cattle = cattleList.get(i);
 
 
-                updateCattleDetail(farm.getFarmId(),farm.getFarmName(),farm.getFarmRegNo(),farm.getFarmOwnName(),farm.getFarmVetDiv(),farm.getFarmGSDiv(),farm.getFarmAddress(),farm.getFarmContactNo(),farm.getFarmCattleCount(),farm.getFarmDairyCattleCount());
+                updateCattleDetail(cattle.getCattleID(),cattle.getCattleTAGID(),cattle.getCattleDateOfBirth(),cattle.getCattleBreed(),cattle.getCattleSpecialFeature(),cattle.getCattleSex(),cattle.getCattleNoOfLactation(),cattle.getCattleBirthWeight(),cattle.getBreedingWeight(),cattle.getCattleWeaningWeight(),cattle.getCattleAveragePreWeaningGrowthRate(),cattle.getCattleAveragePostWeaningGrowthRate(),cattle.getCattleLastCalvingDate());
               // deleteCattle(cattle.getCattleID());
 
                 return true;
@@ -204,54 +204,63 @@ public class ViewCattles extends AppCompatActivity {
 
     }
 
-    private void updateCattleDetail(final String ID, String Name, String RegNo, String OwnName, String VetDiv ,String GSDiv ,String Address, String ContactNo, String CattleCount, String DairyCattleCount){
+    private void updateCattleDetail(final String ID, String TAGID,  String DateOfBirth, String Breed ,String Specialfeature ,String Sex, String NoLactation, String BirthWeght, String breedingWeight,String WeaningWeght,String AveragePreWeaningGrowthRate,String  AveragePostWeaningGrowthRate,String LastCalving ){
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
 
-        final View dialogView = inflater.inflate(R.layout.update_farms,null);
+        final View dialogView = inflater.inflate(R.layout.update_cattles,null);
 
         dialogBuilder.setView(dialogView);
 
-        final EditText editTextName = (EditText) dialogView.findViewById(R.id.editTextName);
-        final EditText editTextRegNo = (EditText) dialogView.findViewById(R.id.editTextRegNo);
-        final EditText editTextOwnName = (EditText) dialogView.findViewById(R.id.editTextOwnName);
-        final EditText editTextVetDiv = (EditText) dialogView.findViewById(R.id.editTextVetDiv);
-        final EditText editTextGSDiv = (EditText) dialogView.findViewById(R.id.editTextGSDiv);
-        final EditText editTextAddress = (EditText) dialogView.findViewById(R.id.editTextAddress);
-        final EditText editTextContactNo = (EditText) dialogView.findViewById(R.id.editTextContactNo);
-        final EditText editTextCattleCount = (EditText) dialogView.findViewById(R.id.editTextCattleCount);
-        final EditText editTextDairyCattleCount = (EditText) dialogView.findViewById(R.id.editTextDairyCattleCount);
+        final EditText editTextTag = (EditText) dialogView.findViewById(R.id.editTextTagId);
+        final EditText editTextDob = (EditText) dialogView.findViewById(R.id.editTextDOB);
+        final EditText editTextbreed = (EditText) dialogView.findViewById(R.id.editTextBreed);
+        final EditText editTextSpecialfeature = (EditText) dialogView.findViewById(R.id.editTextSpeacialFeature);
+        final EditText editTextSex = (EditText) dialogView.findViewById(R.id.editTextSex);
+        final EditText editTextNoOfLactation = (EditText) dialogView.findViewById(R.id.editTextNoOfLactation);
+        final EditText editTextBirthWeight = (EditText) dialogView.findViewById(R.id.editTextBirthWeight);
+        final EditText editTextBreedingWeight = (EditText) dialogView.findViewById(R.id.editTextBreedingWeight);
+        final EditText editTextWeaningWeight = (EditText) dialogView.findViewById(R.id.editTextWeaningWeight);
         //  final Button btnCancell = (Button)dialogView.findViewById(R.id.buttonCancel);
-        final Button btnUpdate = (Button)dialogView.findViewById(R.id.buttonUpdate);
-        final Button btnDelete = (Button)dialogView.findViewById(R.id.buttonDelete);
+        final EditText editTextPreRate = (EditText) dialogView.findViewById(R.id.editTextAveragePreWeaningGrowthRate);
+        final EditText editTextPostRate = (EditText) dialogView.findViewById(R.id.editTextAveragePostWeaningGrowthRate);
+        final EditText editTextLastCalving=(EditText)dialogView.findViewById(R.id.editTextCattleLastCalvingDate);
+        final Button btnUpdate = (Button)dialogView.findViewById(R.id.buttonUpdate1);
+        final Button btnDelete = (Button)dialogView.findViewById(R.id.buttonDelete1);
 
-        editTextName.setText(Name);
-        editTextRegNo.setText(RegNo);
-        editTextOwnName.setText(OwnName);
-        editTextVetDiv.setText(VetDiv);
-        editTextGSDiv.setText(GSDiv);
-        editTextAddress.setText(Address);
-        editTextCattleCount.setText(CattleCount);
-        editTextDairyCattleCount.setText(DairyCattleCount);
-        editTextContactNo.setText(ContactNo);
+        editTextTag.setText(TAGID);
+        editTextDob.setText(DateOfBirth);
+        editTextbreed.setText(Breed);
+        editTextSpecialfeature.setText(Specialfeature);
+        editTextSex.setText(Sex);
+        editTextNoOfLactation.setText(NoLactation);
+        editTextBirthWeight.setText(BirthWeght);
+        editTextBreedingWeight.setText(breedingWeight);
+        editTextWeaningWeight.setText(WeaningWeght);
+        editTextPreRate.setText(AveragePreWeaningGrowthRate);
+        editTextPostRate.setText(AveragePostWeaningGrowthRate);
+        editTextLastCalving.setText(LastCalving);
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String Name = editTextName.getText().toString().trim();
-                String RegNo = editTextRegNo.getText().toString().trim();
-                String OwnName = editTextOwnName.getText().toString().trim();
-                String VetDiv = editTextVetDiv.getText().toString().trim();
-                String GSDiv = editTextGSDiv.getText().toString().trim();
-                String Address = editTextAddress.getText().toString().trim();
-                String ContactNo = editTextContactNo.getText().toString().trim();
-                String CattleCount = editTextCattleCount.getText().toString().trim();
-                String DairyCattleCount = editTextDairyCattleCount.getText().toString().trim();
+                String TAGID = editTextTag.getText().toString().trim();
+                String DateOfBirth = editTextDob.getText().toString().trim();
+                String Breed = editTextbreed.getText().toString().trim();
+                String SpecialFeature = editTextSpecialfeature.getText().toString().trim();
+                String Sex = editTextSex.getText().toString().trim();
+                String NoOfLactation = editTextNoOfLactation.getText().toString().trim();
+                String BirthWeight = editTextBirthWeight.getText().toString().trim();
+                String breedingWeight = editTextBreedingWeight.getText().toString().trim();
+                String WeaningWeight = editTextWeaningWeight.getText().toString().trim();
+                String AveragePreWeaningGrowthRate = editTextPreRate.getText().toString().trim();
+                String AveragePostWeaningGrowthRate = editTextPostRate.getText().toString().trim();
+                String LastCalving = editTextLastCalving.getText().toString().trim();
 
 
-                updateFarm(ID,Name,RegNo,OwnName,VetDiv,GSDiv,Address,ContactNo,CattleCount,DairyCattleCount);
+                updateCattle(ID,TAGID,DateOfBirth,Breed,SpecialFeature,Sex,NoOfLactation,BirthWeight,breedingWeight,WeaningWeight,AveragePreWeaningGrowthRate,AveragePostWeaningGrowthRate,LastCalving);
 
             }
         });
@@ -275,7 +284,7 @@ public class ViewCattles extends AppCompatActivity {
 //
 //                updateFarm(ID,Name,RegNo,OwnName,VetDiv,GSDiv,Address,ContactNo,CattleCount,DairyCattleCount);
 
-                deleteFarm(ID);
+                deleteCattle(ID);
 
             }
         });
@@ -300,7 +309,7 @@ public class ViewCattles extends AppCompatActivity {
 //        });
 
 
-        dialogBuilder.setTitle("Update Farm Details");
+        dialogBuilder.setTitle("Update Cattle Details");
         AlertDialog alertDialog = dialogBuilder.create();
         alertDialog.show();
 
@@ -308,14 +317,14 @@ public class ViewCattles extends AppCompatActivity {
     }
 
 
-    private boolean updateFarm(String ID,String Name, String RegNo, String OwnName, String VetDiv, String GSDiv, String Address, String ContactNo, String CattleCount, String DairyCattleCount){
+    private boolean updateCattle(String ID,String TAGID, String DateOfBirth, String Breed, String SpecialFeature, String Sex, String NoOfLactation, String BirthWeight, String breedingWeight, String WeaningWeight,String AveragePreWeaningGrowthRate,String AveragePostWeaningGrowthRate,String LastCalving){
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("farms").child(ID);
-        Farm farm = new Farm(ID,Name,RegNo,OwnName,VetDiv,GSDiv,Address,ContactNo,CattleCount, DairyCattleCount);
-        databaseReference.setValue(farm);
-        Toast.makeText(this, "Farm Updated Successfully", Toast.LENGTH_LONG).show();
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("cattle").child(ID);
+        Cattle cattle = new Cattle(ID,TAGID,DateOfBirth,Breed,SpecialFeature,Sex,NoOfLactation,BirthWeight,breedingWeight,WeaningWeight,AveragePreWeaningGrowthRate,AveragePostWeaningGrowthRate,LastCalving);
+        databaseReference.setValue(cattle);
+        Toast.makeText(this, "Cattles Updated Successfully", Toast.LENGTH_LONG).show();
 
-        Intent intToHome = new Intent(Home.this, Home.class);
+        Intent intToHome = new Intent(ViewCattles.this, ViewCattles.class);
         startActivity(intToHome);
 
 
@@ -329,7 +338,7 @@ public class ViewCattles extends AppCompatActivity {
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("cattle").child(ID);
         databaseReference.removeValue();
-        Toast.makeText(this, "Farm Deleted Successfully", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Cattles Deleted Successfully", Toast.LENGTH_LONG).show();
 
         Intent intToHome = new Intent(ViewCattles.this, ViewCattles.class);
         startActivity(intToHome);

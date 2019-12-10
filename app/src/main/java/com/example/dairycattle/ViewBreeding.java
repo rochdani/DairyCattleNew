@@ -66,7 +66,7 @@ public class ViewBreeding extends AppCompatActivity {
 
 
                 //updateFarmDetail(farm.getFarmId(),farm.getFarmName(),farm.getFarmRegNo(),farm.getFarmOwnName(),farm.getFarmVetDiv(),farm.getFarmGSDiv(),farm.getFarmAddress(),farm.getFarmContactNo(),farm.getFarmCattleCount(),farm.getFarmDairyCattleCount());
-                deleteBreed(breeding.getBreedingID());
+                //deleteBreed(breeding.getBreedingID());
 
                 return true;
 

@@ -9,13 +9,36 @@
     android:orientation="vertical">
 
 
+    <EditText
+        android:id="@+id/editTextCattleLastCalvingDate"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Last Calving Date"
+        android:inputType="date"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline39"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline31" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_end="731dp"
         app:layout_constraintGuide_percent="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -24,15 +47,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.075" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_begin="124dp"
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -40,7 +63,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.225" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -48,7 +71,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.300" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -56,7 +79,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.375" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
@@ -64,7 +87,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.450" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -72,7 +95,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_percent="0.525" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -80,7 +103,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
@@ -89,20 +112,42 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
 
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.675" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="1"
-        app:layout_constraintGuide_begin="20dp" />
+
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.75" />
+
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/editTextTagId"
         android:layout_width="match_parent"
         android:layout_height="47dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Cattle Tag Id"
+        android:inputType="textNoSuggestions"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <EditText
+        android:id="@+id/editTextDOB"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
@@ -112,8 +157,32 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Farm name"
-        android:inputType="textPersonName"
+        android:hint="Cattle date of birth"
+        android:inputType="date"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/editTextBreed"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Cattle Breed"
+        android:inputType="text"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -122,54 +191,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <EditText
-        android:id="@+id/editTextRegNo"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/edittextstyle"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Registration No"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark1"
-        android:textColorHint="@color/colorPrimaryDark1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-
-    <EditText
-        android:id="@+id/editTextOwnName"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/edittextstyle"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Owner Name"
-        android:inputType="textPersonName"
-
-        android:textColor="@color/colorPrimaryDark1"
-        android:textColorHint="@color/colorPrimaryDark1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.518" />
-
-    <EditText
-        android:id="@+id/editTextVetDiv"
+        android:id="@+id/editTextSpeacialFeature"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -183,17 +205,19 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Veternary Division"
+        android:hint="Cattle special features"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextGSDiv"
+        android:id="@+id/editTextSex"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -205,8 +229,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="G.S Division"
-        android:inputType="textPersonName"
+        android:hint="Cattle Sex"
+        android:inputType="text"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -215,7 +239,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <EditText
-        android:id="@+id/editTextAddress"
+        android:id="@+id/editTextNoOfLactation"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -227,8 +251,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Address"
-        android:inputType="textPersonName"
+        android:hint="Cattle no of lactation"
+        android:inputType="number"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -237,7 +261,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <EditText
-        android:id="@+id/editTextContactNo"
+        android:id="@+id/editTextBirthWeight"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -249,17 +273,19 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Contact No"
-        android:inputType="textPersonName"
+        android:hint="Cattle Birth Weight"
+        android:inputType="numberDecimal"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextCattleCount"
+        android:id="@+id/editTextBreedingWeight"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -271,8 +297,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle Count"
-        android:inputType="textPersonName"
+        android:hint="Cattle breeding weight"
+        android:inputType="numberDecimal"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
@@ -281,7 +307,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <EditText
-        android:id="@+id/editTextDairyCattleCount"
+        android:id="@+id/editTextWeaningWeight"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -293,8 +319,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Dairy Cattle Count"
-        android:inputType="textPersonName"
+        android:hint="Cattle weaning weight"
+        android:inputType="numberDecimal"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
@@ -302,33 +328,101 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
+
+    <EditText
+        android:id="@+id/editTextAveragePreWeaningGrowthRate"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Cattle pre weaning growth rate"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+    <EditText
+        android:id="@+id/editTextAveragePostWeaningGrowthRate"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Cattle post weaning growth rate"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorPrimaryDark1"
+        android:textColorHint="@color/colorPrimaryDark1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline31"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
     <Button
-        android:id="@+id/buttonUpdate"
+        android:id="@+id/buttonUpdate1"
         android:layout_width="100dp"
         android:layout_height="39dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/buttonshape"
         android:gravity="center"
         android:text="@string/common_google_play_services_update_button"
         android:textColorHint="@color/colorPrimaryDark1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCancel"
+        app:layout_constraintBottom_toTopOf="@+id/guideline40"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
-
-
+        app:layout_constraintTop_toTopOf="@+id/guideline39" />
 
     <Button
-        android:id="@+id/buttonDelete"
+        android:id="@+id/buttonDelete1"
         android:layout_width="100dp"
         android:layout_height="37dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/buttonshape"
         android:text="Delete"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline40"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonCancel"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
+        app:layout_constraintTop_toTopOf="@+id/guideline39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.825" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

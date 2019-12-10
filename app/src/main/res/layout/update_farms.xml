@@ -122,7 +122,7 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <EditText
-        android:id="@+id/editTagId"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:layout_marginStart="15dp"
@@ -134,8 +134,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle Tag Id"
-        android:inputType="textNoSuggestions"
+        android:hint="Name"
+        android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -144,7 +144,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <EditText
-        android:id="@+id/editTextCattleDOB"
+        android:id="@+id/editTextRegNo"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -156,8 +156,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle date of birth"
-        android:inputType="date"
+        android:hint="RegNo"
+        android:inputType="textNoSuggestions"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -167,7 +167,7 @@
 
 
     <EditText
-        android:id="@+id/editTextCattleBreed"
+        android:id="@+id/editTextOwnName"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -179,7 +179,7 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="CattleBreed"
+        android:hint="OwnerName"
         android:inputType="textPersonName"
 
         android:textColor="@color/colorPrimaryDark1"
@@ -191,7 +191,7 @@
         app:layout_constraintVertical_bias="0.518" />
 
     <EditText
-        android:id="@+id/editTextCattleSpeacialFeature"
+        android:id="@+id/editTextVetDiv"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -205,7 +205,7 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle Special Feature"
+        android:hint="Vetnerian name"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
@@ -215,7 +215,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <EditText
-        android:id="@+id/editTextCattleSex"
+        android:id="@+id/editTextGSDiv"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -227,8 +227,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Sex"
-        android:inputType="textPersonName"
+        android:hint="GsDiv"
+        android:inputType="text"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -237,7 +237,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <EditText
-        android:id="@+id/editTextCattleNoOfLactation"
+        android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -249,8 +249,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle no of Lactation"
-        android:inputType="number"
+        android:hint="Address"
+        android:inputType="textNoSuggestions"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -259,7 +259,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <EditText
-        android:id="@+id/editTextCattleBirthWeight"
+        android:id="@+id/editTextContactNo"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -271,8 +271,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle birth weight"
-        android:inputType="numberDecimal"
+        android:hint="Contact No"
+        android:inputType="phone"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
@@ -281,7 +281,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <EditText
-        android:id="@+id/editTextCattleBreedingWeight"
+        android:id="@+id/editTextCattleCount"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -293,8 +293,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Breeding Weight"
-        android:inputType="numberDecimal"
+        android:hint="Cattle Count"
+        android:inputType="number"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
@@ -303,7 +303,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <EditText
-        android:id="@+id/editTextCattleWeaningWeight"
+        android:id="@+id/editTextDairyCattleCount"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -315,8 +315,8 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:gravity="center"
-        android:hint="Cattle Weaning weight"
-        android:inputType="numberDecimal"
+        android:hint="dairy cattle count"
+        android:inputType="number"
         android:textColor="@color/colorPrimaryDark1"
         android:textColorHint="@color/colorPrimaryDark1"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
@@ -324,47 +324,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
-    <EditText
-        android:id="@+id/editTextCattleAveragePreWeaningGrowthRate"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/edittextstyle"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Cattle pre weaning growth rate"
-        android:inputType="numberDecimal"
-        android:textColor="@color/colorPrimaryDark1"
-        android:textColorHint="@color/colorPrimaryDark1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10" />
-
-    <EditText
-        android:id="@+id/editTextCattleAveragePostWeaningGrowthRate"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/edittextstyle"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Cattle Post Weaning growth rate"
-        android:inputType="numberDecimal"
-        android:textColor="@color/colorPrimaryDark1"
-        android:textColorHint="@color/colorPrimaryDark1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
 
     <Button

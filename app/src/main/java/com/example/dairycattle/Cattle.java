@@ -40,6 +40,22 @@ public class Cattle {
         CattleLastCalvingDate = cattleLastCalvingDate;
     }
 
+    public Cattle(String cattleID, String cattleTAGID, String cattleDateOfBirth, String cattleBreed, String cattleSpecialFeature, String cattleSex, String cattleNoOfLactation, String cattleBirthWeight, String breedingWeight, String cattleWeaningWeight, String cattleAveragePreWeaningGrowthRate, String cattleAveragePostWeaningGrowthRate,String cattleLastCalvingDate) {
+        CattleID = cattleID;
+        CattleTAGID = cattleTAGID;
+        CattleDateOfBirth = cattleDateOfBirth;
+        CattleBreed = cattleBreed;
+        CattleSpecialFeature = cattleSpecialFeature;
+        CattleSex = cattleSex;
+        CattleNoOfLactation = cattleNoOfLactation;
+        CattleBirthWeight = cattleBirthWeight;
+        BreedingWeight = breedingWeight;
+        CattleWeaningWeight = cattleWeaningWeight;
+        CattleAveragePreWeaningGrowthRate = cattleAveragePreWeaningGrowthRate;
+        CattleAveragePostWeaningGrowthRate = cattleAveragePostWeaningGrowthRate;
+        CattleLastCalvingDate = cattleLastCalvingDate;
+    }
+
     public String getCattleID() {
         return CattleID;
     }
